@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\College;
 use App\Imports\CollegeImport;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,8 @@ class CollegeController extends Controller
 
     public function index()
     {
-        return view('college.index');
+        $college = College::all();
+        return view('college.index', compact('college'));
     }
 
     public function importExcelData(Request $request)
