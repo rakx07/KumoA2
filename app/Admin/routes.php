@@ -15,5 +15,5 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('departments', DepartmentControllers::class);
 
-
+//added to commits
 });
