@@ -3,6 +3,19 @@
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
     "keywords": ["laravel", "framework"],
+
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.packagist.org"
+        },
+        {
+            "type": "path",
+            "url": "app/Admin/extensions/open-admin-ext/phpinfo",
+            "priority": 0
+        }
+    ],
+
     "license": "MIT",
     "require": {
         "php": "^8.1",
@@ -12,6 +25,7 @@
         "laravel/tinker": "^2.8",
         "maatwebsite/excel": "^3.1",
         "open-admin-ext/helpers": "^1.0",
+        "open-admin-ext/phpinfo": "^1.0",
         "open-admin-org/open-admin": "^1.0"
     },
     "require-dev": {
@@ -29,7 +43,11 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
+
     },
+        
+
+
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
@@ -64,6 +82,7 @@
             "php-http/discovery": true
         }
     },
+
     "minimum-stability": "stable",
     "prefer-stable": true
 }
